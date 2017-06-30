@@ -1,0 +1,189 @@
+/*This sheet sets the style of:
+ - the title element and its derivatives
+ - the result-grid element and its derivatives
+*/
+
+
+
+/* These are for the title elements*/
+
+.title_element {
+	position: relative;
+	z-index: 1;
+	display: table;
+	height: 95vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+	background-color: black;
+	color: white;
+	font-family: Arial;
+	font-size: 1.5em;
+	text-shadow: 2px 1px blue;
+	text-align: center;
+	
+}
+.title_flair {
+	display: table-cell;
+	vertical-align: middle;
+}
+.title_flair h1 {
+	padding-bottom: 10px;
+}
+
+.title_flair h2 {
+	font-size: 0.9em;
+}
+
+.title_flair p {
+	position: absolute;
+	z-index: 2;
+	color: red;
+	top: 90%;
+	text-align: center;
+	left:0;
+	right:0;
+	text-shadow: 0.5px 1px black;
+	font-size: 0.7em;
+}
+
+/*These are for the result elements*/
+
+.resultbox {
+	position: relative;
+	display: block;
+	z-index: 3;
+	height: 300px;
+}
+
+.result {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	max-width: 500px;
+	margin: auto;
+	overflow: hidden;
+	background-color: black;
+}
+
+.result img {
+	height: auto;
+	width: 100%;
+	position: absolute;
+    top: -1000%;
+    bottom: -1000%;
+    left: -1000%;
+    right: -1000%;
+	max-height: auto;
+	max-width: auto;
+    margin: auto;
+	transition: width 2s, transform 2s;
+	
+}
+
+.result:hover img {
+	width: 120%;
+	-webkit-transform: -webkit-rotate(20deg);
+	transform: rotate(20deg);
+}
+
+
+.resultwrapper {
+	position: relative;
+	z-index: 4;
+	width: 100%;
+	height: 70%;
+	max-width: 500px;
+	margin: auto;
+}
+
+.result_caption {
+	display: table;
+	position: relative;
+	z-index: 5;
+	width: 80%;
+	height: 100px;
+	top: -20px;
+	background-color: rgb(100, 100, 100);
+	color: white;
+}
+.result_set {
+	display: table-cell;
+	vertical-align: top;
+	padding-bottom: 1%;
+	text-shadow: 0.5px 0.5px blue;
+}
+
+.result_title {
+	position: relative;
+	z-index: 11;
+	font-family: "Times New Roman";
+	font-size: 1.2em;
+	text-decoration: underline;
+	margin: 10px;
+	padding-bottom: 10px;
+}
+
+.result_set p {
+	font-family: "Times New Roman";
+	font-size: 1em;
+	margin-left: 10px;
+	margin: 10px;
+}
+
+/*For windows*/
+@media only screen and (min-width: 1024px) {
+		
+	.resultbox {
+		height: 240px;
+	}
+
+	.resulthood {
+		position: relative;
+		z-index: 5;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		background: transparent; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,225,0.2)); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,225,0.2)); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,225,0.2)); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,225,0.2)); /* Standard syntax */
+	}
+	
+	.resulthood:hover ~ .resultwrapper .result img {
+		width: 130%;
+		-webkit-transform: -webkit-rotate(10deg);
+		transform: rotate(10deg);
+	}
+
+	.resultwrapper {
+		position: relative;
+		height: 100%;	
+		width: 100%;
+		top: -100%;
+	}
+
+	.result_caption {
+		background-color: transparent;
+		position: relative;
+		z-index: 5;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		color: white;
+		margin: auto;
+	}
+	
+	.result_set {
+		vertical-align: bottom;
+	}
+
+	.result_title:hover {
+		color: yellow;
+	}
+	
+}

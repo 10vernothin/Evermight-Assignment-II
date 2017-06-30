@@ -1,0 +1,100 @@
+/* protocols and taken from W3Schools.com */
+
+/* This sheet creates the general gridlike structure for the whole page, and also the footer */
+
+* {
+    box-sizing: border-box;
+	margin: 0px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+body {
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background-image: url('starfield_poster.jpg');
+	background-position: contain;
+}
+
+
+/*Phone (less than 767pix)*/
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+	display:inline;
+	width: 100%;
+}
+
+.col-ph-hidden {display:none;}
+
+/*Tablet (between 768-1024pix)*/
+@media only screen and (min-width: 768px){
+	@media only screen and (max-width: 1024px){
+		.col-m-hidden {display: none;} /*hidden*/
+		.col-m-1 {display: inline; width: 8.33%;}
+		.col-m-2 {display: inline; width: 16.66%;}
+		.col-m-3 {display: inline; width: 25%;}
+		.col-m-4 {display: inline; width: 33.33%;}
+		.col-m-5 {display: inline; width: 41.66%;}
+		.col-m-6 {display: inline; width: 50%;}
+		.col-m-7 {display: inline; width: 58.33%;}
+		.col-m-8 {display: inline; width: 66.66%;}
+		.col-m-9 {display: inline; width: 75%;}
+		.col-m-10 {display: inline; width: 83.33%;}
+		.col-m-11 {display: inline; width: 91.66%;}
+		.col-m-12 {display: inline; width: 100%;}
+	}
+}
+
+/*Window*/
+@media only screen and (min-width: 1025px){
+	
+.col-hidden {display: none;} /*hidden*/
+.col-1 {display: inline; width: 8.33%;}
+.col-2 {display: inline; width: 16.66%;}
+.col-3 {display: inline; width: 25%;}
+.col-4 {display: inline; width: 33.33%;}
+.col-5 {display: inline; width: 41.66%;}
+.col-6 {display: inline; width: 50%;}
+.col-7 {display: inline; width: 58.33%;}
+.col-8 {display: inline; width: 66.66%;}
+.col-9 {display: inline; width: 75%;}
+.col-10 {display: inline; width: 83.33%;}
+.col-11 {display: inline; width: 91.66%;}
+.col-12 {display: inline; width: 100%;}
+.m-space {
+	position: absolute;
+	z-index: 101;
+	left: 0;
+	right: 0;
+}
+}
+
+/*footer*/
+
+footer {
+	display: table;
+	height: 20vh;
+	width: 100%;
+	background-color: purple;
+	font-family: Arial;
+	font-size: 1em;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+footer div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+footer a {
+	color: white;
+}

@@ -1,0 +1,175 @@
+
+/*Below creates the Menu elements*/
+
+
+.menuplaceholder {
+	height:100%;
+	padding:0%;
+	padding-bottom: 49px;
+	background-color: teal;
+}
+
+
+.m-popup {
+	display: inline;
+	-ms-transform: translate(-100%, 0%); /* IE 9 */
+	-webkit-transform: translate(-100%, 0%); /* Safari */
+	transform: translate(-100%, 0%);
+	transition: transform 0.5s;
+	height: 100vh;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.ph-popuphood {
+	position: absolute;
+	z-index: 102;
+	top: 0;
+	background-color: teal;
+	width: 100vw;
+	-ms-transform: translate(-200%, 0%); /* IE 9 */
+	-webkit-transform: translate(-200%, 0%); /* Safari */
+	transform: translate(-200%, 0%);
+	height: 100vh;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+@media only screen and (min-width: 768px) {
+		@media only screen and (max-width: 1024px) {
+			.m-popup {
+				display:none;
+				-ms-transform: translate(-100%, 0%); /* IE 9 */
+				-webkit-transform: translate(-100%, 0%); /* Safari */
+				transform: translate(-100%, 0%);
+				transition: transform 0.5s;
+				-webkit-transition: -webkit-transform 0.5s;}
+			
+		}
+		@media only screen and (min-width: 1025px){
+			.m-popup {
+			-ms-transform: translate(0%, 0%); /* IE 9 */
+			-webkit-transform: translate(0%, 0%); /* Safari */
+			transform: translate(0%, 0%);
+			}
+		}
+}
+
+.menu_placeholder {
+	transition: none;
+	-webkit-transition: none;
+}
+
+.mainmenu {
+	position: relative;
+	background-color: teal;
+	height: 50px;
+	padding: 0;
+	z-index: 103;
+	transition: none;
+	-webkit-transition: none;
+}
+
+.popupwrapper {
+	position: relative;
+	height: 50px;
+	z-index: 103;
+	padding: 0px;
+}
+
+.menuwrapper {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	padding: 0px;
+	width: 100%;
+}
+
+.m-space {
+	position: fixed;
+	z-index: 101;
+	top: 0;
+	height: 50px;
+	background-color:teal;
+}
+
+.menuhoverable {
+	padding: 0px;
+	height: 50px;
+	-webkit-transition: width 0.5s;
+	transition: width 0.5s;
+}
+
+@media only screen and (min-width: 767px) {
+	.popupwrapper {
+		-webkit-transition: none;
+		transition: none;
+	}
+	@media only screen and (min-width: 1025px) {
+		.menuhoverable{
+		-webkit-transition: none;
+		transition: none;
+	}
+	
+	}
+	
+}
+
+/*Below are hoverables. Unfortunately I don't know how to make non-default screens unhoverable*/
+
+@media only screen and (max-width: 1024px) {
+	
+	.menuhoverable:hover .m-popup {
+			display:inline;
+			-ms-transform: translate(0%, 0%);
+			-webkit-transform: translate(0%, 0%); 
+			transform: translate(0%, 0%);
+	}
+	
+	.menuhoverable:hover {
+			background-color: teal;
+	}
+	
+	.menuhoverable:hover ~ .greyhood {
+			height: 100vh;
+			background-color: rgba(0,0,0,0.5);
+	}
+	
+	@media only screen and (min-width: 768px) {
+		.menuhoverable:hover {
+			width: 33.33%;
+			height: 100vh;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.menuhoverable:hover ~ .ph-popuphood {
+			transform: translate(-100%, 0);
+			height: 100vh;
+		}
+		
+	}
+	.menuhoverable:hover .m-popup {
+			-ms-transform: translate(0%, 0%);
+			-webkit-transform: translate(0%, 0%); 
+			transform: translate(0%, 0%);
+	}
+}
+
+.menuitem {
+	position: relative;
+	z-index: 103;
+	color: white;
+	font-family: "Arial";
+	font-size: 1em;
+	font-weight: bold;
+	transition: tranform 0.5s;
+}
+
+.menuitem:hover {
+	color: yellow;
+}
+
+.greyhood {
+	height: 100%;
+	transition: background-color 0.5s;
+}
