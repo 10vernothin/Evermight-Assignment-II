@@ -55,7 +55,7 @@
 		}
 }
 
-.menu_placeholder {
+.menublankspace {
 	transition: none;
 	-webkit-transition: none;
 }
@@ -110,9 +110,6 @@
 		-webkit-transition: none;
 		transition: none;
 	}
-	
-	}
-	
 }
 
 /*Below are hoverables. Unfortunately I don't know how to make non-default screens unhoverable*/
@@ -134,8 +131,9 @@
 			height: 100vh;
 			background-color: rgba(0,0,0,0.5);
 	}
+}
 	
-	@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 		.menuhoverable:hover {
 			width: 33.33%;
 			height: 100vh;
