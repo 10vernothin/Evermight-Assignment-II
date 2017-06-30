@@ -107,8 +107,9 @@
 	}
 	@media only screen and (min-width: 1025px) {
 		.menuhoverable{
-		-webkit-transition: none;
-		transition: none;
+			-webkit-transition: none;
+			transition: none;
+		}
 	}
 }
 
@@ -134,24 +135,27 @@
 }
 	
 @media only screen and (min-width: 768px) {
+	@media only screen and (max-width: 1024px) {
 		.menuhoverable:hover {
 			width: 33.33%;
 			height: 100vh;
 		}
 	}
-	@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 767px) {
 		.menuhoverable:hover ~ .ph-popuphood {
 			transform: translate(-100%, 0);
 			height: 100vh;
 		}
 		
-	}
 	.menuhoverable:hover .m-popup {
 			-ms-transform: translate(0%, 0%);
 			-webkit-transform: translate(0%, 0%); 
 			transform: translate(0%, 0%);
-	}
+		}
 }
+
 
 .menuitem {
 	position: relative;
