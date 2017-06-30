@@ -17,7 +17,7 @@ body {
 	height: 100%;
 	width: 100%;
 	z-index: 100;
-	background-image: url('starfield_poster.jpg');
+	background-image: url('images/starfield_poster.jpg');
 	background-position: contain;
 }
 
